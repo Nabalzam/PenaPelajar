@@ -1,7 +1,12 @@
 "use client";
 import React from "react";
-import { Card, CardHeader, Image, CardFooter, Button } from "@nextui-org/react";
+import { Card, CardHeader, Image as Gambar, CardFooter, Button } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
+import rpl from "../../public/erpeel.png"
+import dpib from "../../public/dpib.png"
+import tkr from "../../public/tkr.png"
+import tbsm from "../../public/tbsm.png"
+import Image from "next/image"
 function Kartu({ jurusan, routerPush }) {
   const router = useRouter();
   return (
@@ -19,7 +24,7 @@ function Kartu({ jurusan, routerPush }) {
         <Image
           alt="Woman listening to music"
           className="object-cover rounded-t-lg w-full h-full"
-          src="https://app.requestly.io/delay/5000/https://nextui-docs-v2.vercel.app/images/hero-card-complete.jpeg"
+          src={dpib}
         />{" "}
         <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-full shadow-small z-10">
           <p className="text-tiny text-white/80 mx-2">Available soon.</p>
@@ -76,6 +81,7 @@ export default function JurusanCard() {
             <Kartu key={jurusan} jurusan={jurusan} routerPush={routerPush} />
           ))}
         </div>
+        <Image src={dpib} width="500" height="500"/>
       </div>
     </>
   );
